@@ -1,5 +1,6 @@
 /* Abbreviations! 
-COT - Call to action*/
+COT - Call to action
+HFWL - How Fylo Works Link*/
 
 /*General style*/
 
@@ -9,10 +10,19 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Raleway", sans-serif;
+    font-weight: 400;
 }
 
 #sectionA {
     background-color: hsl(217, 28%, 15%);
+}
+
+li {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* All for the nav bar */
@@ -58,8 +68,9 @@ nav ul li a:hover {
 #maincenter > img {
     display: block;
     margin: auto;
-    width: 700px;
+    width: 65%;
     height: 80%;
+    margin-bottom: 40px;
 }
 
 main {
@@ -129,7 +140,9 @@ Tried using flex here... Not so nice but not that bad..
 #sectionB {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    justify-items: center;
+    padding: 0 150px;
+    margin-bottom: 30px;
 }
 
 .features {
@@ -137,8 +150,84 @@ Tried using flex here... Not so nice but not that bad..
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    margin: 0 200px;   
-    width: 60%;
+    margin: 0 auto;   
+    width: 80%;
     text-align: center;
 
+}
+
+/* Stay Productive section*/ 
+#sectionC {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin: auto;
+}
+
+#sectionC > img {
+    width: 60%;
+}
+#sectionC > div {
+    text-align: justify;
+    align-items: center;
+    margin: 0 25px;
+}
+
+.HFWL {
+    color: hsl(176, 68%, 64%);
+    border-bottom: 2px solid hsl(176, 68%, 64%);
+    width: fit-content;
+}
+
+.HFWL:hover {
+    color: aliceblue;
+    border-bottom: aliceblue;
+    transform: scaleX(0.95);
+    cursor: pointer;
+}
+
+/* Quotes */
+
+#sectionD {
+    padding-top: 50px;
+    background: no-repeat  url(images/bg-quotes.png);
+    background-position: 50px 20px;
+}
+#container4quote-boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 30% 30% 30%;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 0 80px;
+    margin-bottom: 20px;
+}
+
+.quote-box {
+    background-color: hsl(219, 30%, 18%);
+    justify-content: center;
+}
+
+.smaller-box {
+    width: 80%;
+    margin: auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.profile div {
+    line-height: 5px;
+}
+.profile img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
 }
