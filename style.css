@@ -13,18 +13,34 @@ body {
     font-weight: 400;
 }
 
+button {
+    background-color: hsl(198, 60%, 50%);
+}
+
+button:hover {
+    background-color: hsl(176, 68%, 64%);
+    cursor: pointer;
+}
+
 #sectionA {
     background-color: hsl(217, 28%, 15%);
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 li {
     list-style-type: none;
+    color: hsl(0, 0%, 100%);
+    padding: 10px;
 }
 
 a{
     text-decoration: none;
+    color: hsl(0, 0%, 100%);
 }
-
 /* All for the nav bar */
 nav {
     display: flex;
@@ -47,7 +63,6 @@ nav ul li {
     list-style: none;
     text-transform: capitalize;
     margin: auto;
-    padding: 10px;
     font-weight: 500;
 }
 
@@ -84,7 +99,6 @@ main {
 main p {
     padding: 5px 0 0 0;
     margin: auto;
-    width: 500px;
     text-align: center;
     align-items: center;
     font-size: 14px;
@@ -94,17 +108,11 @@ main button {
     margin-top: 30px;
     padding: 12px 65px 12px 65px;
     border: none;
-    background-color: hsl(198, 60%, 50%);
     border-radius: 25px;
     font-weight: bold;
 }
 
-main button:hover {
-    background-color: hsl(176, 68%, 64%);
-    cursor: pointer;
-}
-
-/* The grid stuff*/
+/* -- FEATURES section-- */
 
 /*
 
@@ -156,7 +164,7 @@ Tried using flex here... Not so nice but not that bad..
 
 }
 
-/* Stay Productive section*/ 
+/* -- STAY PRODUCTIVE section-- */ 
 #sectionC {
     display: flex;
     align-items: center;
@@ -192,6 +200,7 @@ Tried using flex here... Not so nice but not that bad..
     padding-top: 50px;
     background: no-repeat  url(images/bg-quotes.png);
     background-position: 50px 20px;
+    margin-bottom: 100px;
 }
 #container4quote-boxes{
     display: grid;
@@ -206,6 +215,9 @@ Tried using flex here... Not so nice but not that bad..
 .quote-box {
     background-color: hsl(219, 30%, 18%);
     justify-content: center;
+    box-shadow: 10px 10px 5px hsl(217, 28%, 15%);
+    border-radius: 5px;
+
 }
 
 .smaller-box {
@@ -218,6 +230,8 @@ Tried using flex here... Not so nice but not that bad..
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    font-size: 11px;
+    margin-bottom: 10px;
 
 }
 
@@ -231,3 +245,107 @@ Tried using flex here... Not so nice but not that bad..
     border-radius: 50%;
     margin: 0 10px 0 0;
 }
+
+/* SIGN UP section */
+
+#sign-up {
+    background-color: hsl(217, 28%, 15%);
+    position: relative;
+    left: 350px;
+    top: 80px;
+    width: 50%;
+    height: max-content;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#sign-up input {
+    width: 350px;
+    height: 38px;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin: 0 20px 0 0;
+    border: 0;
+}
+
+#sign-up button {
+    width: 180px;
+    height: 38px;
+    border-radius: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    border: 0;
+}
+
+/* FOOTER secton*/
+
+footer {
+    background-color: hsl(216, 53%, 9%);
+    padding: 10rem 2.5rem 10rem 2.5rem;
+}
+
+#footerlogo {
+    margin-bottom: 3rem;
+}
+
+/*
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+
+.footer-box1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}*/
+
+#footer-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-boxes p{
+    display: inline;
+    margin: 0 0 20px 15px;
+}
+.footer-boxes img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.footer-box3 li, .footer-box4 li{
+    margin-top: 0;
+    padding-top: 0;
+}
+.footer-box5 img{
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+.footer-box2-PE {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media screen and (max-width:375px) {
+
+    nav {
+        display: grid;
+        margin: auto;
+    }
+
+    nav ul li {
+        display: block;
+    }
+    #sectionB {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
