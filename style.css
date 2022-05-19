@@ -90,7 +90,7 @@ nav ul li a:hover {
 
 main {
     background: no-repeat url(images/bg-curvy-desktop.svg);
-    background-size: cover;
+    background-size:cover;
     align-items: center;
     text-align: center;
     padding: 95px;
@@ -227,6 +227,7 @@ Tried using flex here... Not so nice but not that bad..
 
 .profile {
     display: flex;
+    flex-grow: inherit;
     flex-direction: row;
     justify-content: start;
     align-items: center;
@@ -248,32 +249,36 @@ Tried using flex here... Not so nice but not that bad..
 
 /* SIGN UP section */
 
-#sign-up {
+#signup {
     background-color: hsl(217, 28%, 15%);
     position: relative;
-    left: 350px;
+    left: 16%;
     top: 80px;
-    width: 50%;
+    width: 60%;
     height: max-content;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
 }
 
-#sign-up input {
-    width: 350px;
+#signup input {
+    width: 60%;
     height: 38px;
     border-radius: 20px;
-    padding-left: 20px;
     margin: 0 20px 0 0;
     border: 0;
 }
 
-#sign-up button {
-    width: 180px;
+#signup input::placeholder {
+    padding-left: 20px;
+}
+
+#signup button {
+    width: 35%;
     height: 38px;
     border-radius: 20px;
     font-weight: 400;
+    color: white;
     margin-top: 10px;
     border: 0;
 }
@@ -332,20 +337,39 @@ footer {
 }
 
 
-@media screen and (max-width:375px) {
 
-    nav {
-        display: grid;
-        margin: auto;
-    }
+@media only screen and (max-width:768px) {
 
-    nav ul li {
-        display: block;
-    }
     #sectionB {
-        display: grid;
-        grid-template-columns: 1fr;
+        display:grid;
+        grid-template-columns: minmax(100%, 1fr);
         justify-items: center;
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: 5px;
     }
+
+    #sectionC {
+        display: grid;
+        width: 90%;
+        justify-content: center;
+    }
+
+    #sectionC > img {
+        display: block;
+        padding: 5px 10px;
+        width: 100%;
+    }
+    
+    #sectionD {
+        margin-bottom: 0;
+    }
+    #container4quote-boxes {
+        display: grid;
+        grid-template-columns: 100%;
+        padding: 0 40px;
+    }
+
+    #signup input, #signup button {
+        margin: 10px 0;
+        width: 60%;
+    }
+}
