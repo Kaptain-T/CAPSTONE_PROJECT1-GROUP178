@@ -88,9 +88,9 @@ nav ul li a:hover {
 #maincenter > img {
     display: block;
     margin: auto;
-    width: 65%;
+    width: 70%;
     height: 80%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 main {
@@ -273,7 +273,7 @@ Tried using flex here... Not so nice but not that bad..
     border-radius: 20px;
     font-size: 13px;
     margin: 0 20px 0 0;
-    border: 0;
+    border: none;
 }
 
 #signup input::placeholder {
@@ -294,7 +294,7 @@ Tried using flex here... Not so nice but not that bad..
 
 footer {
     background-color: hsl(216, 53%, 9%);
-    padding: 10rem 2.5rem 10rem 2.5rem;
+    padding: 10rem 2.5rem 2rem 2.5rem;
 }
 
 #footerlogo {
@@ -326,8 +326,8 @@ footer {
 }
 .footer-boxes img {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .footer-box3 li, .footer-box4 li{
@@ -336,13 +336,18 @@ footer {
 }
 .footer-box5 img{
     display: inline-block;
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
 }
 .footer-box2-PE {
     display: flex;
     flex-direction: row;
 }
 
+.footer-box5 img:hover {
+    transition: 0.5s;
+    filter:invert(90%) sepia(59%) saturate(5422%) hue-rotate(152deg) brightness(90%) contrast(95%);
+    cursor: pointer;
+}
 
 
 @media only screen and (max-width:768px) {
@@ -351,6 +356,7 @@ footer {
         transition: 1s;
         height: 100px;
         font-weight: 500;
+        margin-bottom: 60px;
     }
 
     nav ul li {
@@ -400,6 +406,23 @@ footer {
     }
     #signup input, #signup button {
         margin: 10px 0;
-        width: 80%;
+        width: 70%;
     }
+
+    
+    #footer-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-boxes {
+        margin-bottom: 20px;
+    }
+
+    .footer-box5 {
+        margin-top: 30px;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+
 }
