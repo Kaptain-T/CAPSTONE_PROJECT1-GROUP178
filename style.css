@@ -33,8 +33,9 @@ ul {
 
 li {
     list-style-type: none;
+    font-size: 1rem;
     color: hsl(0, 0%, 100%);
-    padding: 10px;
+    padding: 0.5em;
 }
 
 a{
@@ -51,19 +52,23 @@ nav {
     margin: 0 30px 0 30px;
 }
 
-nav img {
-    display: inline-block;
+#logo {
     width: 160px;
     height: 52px;
-    margin: 0 0 0 30px;
+    margin: 0 0 0 5%;
+}
+nav img {
+    width: 100%;
+    height: 100%;
+    
 }
 nav ul li {
     display: inline;
     color: hsl(0, 0%, 100%);
     list-style: none;
     text-transform: capitalize;
-    margin: auto;
-    font-weight: 500;
+    margin: 0;
+    font-size: 1.2rem;
 }
 
 nav ul li a {
@@ -150,7 +155,7 @@ Tried using flex here... Not so nice but not that bad..
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     padding: 0 150px;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 
 .features {
@@ -170,6 +175,7 @@ Tried using flex here... Not so nice but not that bad..
     align-items: center;
     padding: 0 20px;
     margin: auto;
+    margin-bottom: 80px;
 }
 
 #sectionC > img {
@@ -200,7 +206,7 @@ Tried using flex here... Not so nice but not that bad..
     padding-top: 50px;
     background: no-repeat  url(images/bg-quotes.png);
     background-position: 50px 20px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 #container4quote-boxes{
     display: grid;
@@ -209,7 +215,7 @@ Tried using flex here... Not so nice but not that bad..
     justify-content: space-between;
     gap: 2em;
     padding: 0 80px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .quote-box {
@@ -265,12 +271,13 @@ Tried using flex here... Not so nice but not that bad..
     width: 60%;
     height: 38px;
     border-radius: 20px;
+    font-size: 13px;
     margin: 0 20px 0 0;
     border: 0;
 }
 
 #signup input::placeholder {
-    padding-left: 20px;
+    padding-left: 10%;
 }
 
 #signup button {
@@ -340,6 +347,20 @@ footer {
 
 @media only screen and (max-width:768px) {
 
+    nav{
+        transition: 1s;
+        height: 100px;
+        font-weight: 500;
+    }
+
+    nav ul li {
+        padding: 5px;
+        font-size: 1rem;
+    }
+    nav img {
+        width: 70%;
+        height: 100%;
+    }
     #sectionB {
         display:grid;
         grid-template-columns: minmax(100%, 1fr);
@@ -347,6 +368,9 @@ footer {
         padding: 5px;
     }
 
+    .features {
+        margin-bottom: 40px;
+    }
     #sectionC {
         display: grid;
         width: 90%;
@@ -368,8 +392,14 @@ footer {
         padding: 0 40px;
     }
 
+    #signup {
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
     #signup input, #signup button {
         margin: 10px 0;
-        width: 60%;
+        width: 80%;
     }
 }
